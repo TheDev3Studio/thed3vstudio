@@ -750,6 +750,120 @@
     margin-top: 4px;
   }
 
+  /* ===== BIZORA PURPLE THEME ===== */
+  :root {
+    --purple: #7C3AED;
+    --purple-bright: #A78BFA;
+    --purple-glow: #C4B5FD;
+    --lavender: #EDE9FE;
+    --purple-card: rgba(30,10,60,0.75);
+    --purple-border: rgba(167,139,250,0.22);
+  }
+
+  .project-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .project-main.purple-theme {
+    background: #0D0520;
+  }
+
+  .project-screen.purple-screen {
+    background: linear-gradient(135deg, #0D0520, #1A0840);
+  }
+
+  .project-screen.purple-screen::before {
+    background-image:
+      linear-gradient(rgba(124,58,237,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,58,237,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .project-glow-blob.purple-blob {
+    background: radial-gradient(ellipse, rgba(124,58,237,0.2), transparent 60%);
+  }
+
+  .project-tag.purple-tag {
+    background: rgba(124,58,237,0.2);
+    border-color: rgba(124,58,237,0.5);
+    color: var(--purple-bright);
+  }
+
+  .tech-pill.purple-pill {
+    color: var(--purple-glow);
+    border-color: rgba(167,139,250,0.25);
+    background: rgba(124,58,237,0.08);
+  }
+
+  .metric-val.purple-val { color: var(--purple-bright); }
+
+  .project-browser.purple-browser {
+    background: rgba(13,5,32,0.95);
+    border-bottom-color: rgba(124,58,237,0.2);
+  }
+
+  .bizora-feature-chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 20px;
+  }
+  .bizora-chip {
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.5px;
+    background: rgba(124,58,237,0.12);
+    border: 1px solid rgba(167,139,250,0.2);
+    color: var(--purple-bright);
+  }
+
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1px solid rgba(167,139,250,0.3);
+    border-radius: 6px;
+    color: var(--purple-bright);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: rgba(124,58,237,0.1);
+    transition: all 0.3s;
+    margin-top: 12px;
+  }
+  .github-link:hover {
+    background: rgba(124,58,237,0.25);
+    border-color: var(--purple-bright);
+    box-shadow: 0 0 30px rgba(124,58,237,0.3);
+  }
+
+  /* AI Flow diagram inside card */
+  .ai-flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+  .ai-flow-step {
+    padding: 6px 12px;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(167,139,250,0.2);
+    border-radius: 6px;
+    font-size: 11px;
+    font-family: 'Space Mono', monospace;
+    color: var(--purple-glow);
+    white-space: nowrap;
+  }
+  .ai-flow-arrow {
+    color: var(--purple-bright);
+    font-size: 14px;
+  }
+
   /* ===== PROCESS ===== */
   #process {
     padding: 160px 60px;
@@ -1004,7 +1118,6 @@
       <a href="#services" class="btn-ghost">Our Services</a>
     </div>
   </div>
-
 </section>
 
 <!-- STUDIO / ABOUT -->
@@ -1177,49 +1290,116 @@
     <div class="work-header">
       <div class="section-label reveal">Featured Work</div>
       <h2 class="section-title reveal delay-1">Built for the real world.</h2>
+      <p class="section-body reveal delay-2" style="max-width:520px;margin:0 auto;">Two products. Two stacks. One studio.</p>
     </div>
 
-    <div class="project-showcase reveal delay-2">
-      <div class="project-main">
-        <div class="project-browser">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-url">3pracross.com</div>
-        </div>
-        <div class="project-screen">
-          <div class="project-glow-blob"></div>
-          <div class="project-content">
-            <div class="project-tag">Full-Stack Project</div>
-            <div class="project-title">3Pracross<br>Website</div>
-            <div class="project-desc">
-              A complete, production-grade website built from ground up for 3Pracross — covering the full stack from a performant frontend to a robust backend infrastructure. Delivered end-to-end by Dev Studio.
-            </div>
-            <div class="project-tech">
-              <span class="tech-pill">React.js</span>
-              <span class="tech-pill">Node.js</span>
-              <span class="tech-pill">MongoDB</span>
-              <span class="tech-pill">REST API</span>
-              <span class="tech-pill">Tailwind CSS</span>
-            </div>
-            <div class="project-metrics">
-              <div class="metric">
-                <div class="metric-val">100%</div>
-                <div class="metric-lab">Custom Built</div>
+    <div class="project-showcase-grid">
+
+      <!-- PROJECT 1: 3PRACROSS — BLUE THEME -->
+      <div class="project-showcase reveal delay-2">
+        <div class="project-main">
+          <div class="project-browser">
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-url">3pracross.com</div>
+          </div>
+          <div class="project-screen">
+            <div class="project-glow-blob"></div>
+            <div class="project-content">
+              <div class="project-tag">Client · Full-Stack</div>
+              <div class="project-title" style="font-size:36px;">3Pracross<br>Website</div>
+              <div class="project-desc">
+                A complete, production-grade corporate website — designed and engineered end-to-end by Dev Studio. From UI to backend infrastructure, fully custom.
               </div>
-              <div class="metric">
-                <div class="metric-val">Full</div>
-                <div class="metric-lab">Stack Ownership</div>
+              <div class="project-tech">
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">MongoDB</span>
+                <span class="tech-pill">REST API</span>
+                <span class="tech-pill">Tailwind</span>
               </div>
-              <div class="metric">
-                <div class="metric-val">∞</div>
-                <div class="metric-lab">Scalable</div>
+              <div class="project-metrics">
+                <div class="metric">
+                  <div class="metric-val">100%</div>
+                  <div class="metric-lab">Custom Built</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-val">Full</div>
+                  <div class="metric-lab">Stack</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-val">∞</div>
+                  <div class="metric-lab">Scalable</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- PROJECT 2: BIZORA — PURPLE/LAVENDER THEME -->
+      <div class="project-showcase reveal delay-3">
+        <div class="project-main purple-theme">
+          <div class="project-browser purple-browser">
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-url" style="color:#A78BFA;">github.com/Riya-chandra/Bizora</div>
+          </div>
+          <div class="project-screen purple-screen">
+            <div class="project-glow-blob purple-blob"></div>
+            <div class="project-content">
+              <div class="project-tag purple-tag">AI · SaaS · Open Source</div>
+              <div class="project-title" style="font-size:36px;background:linear-gradient(135deg,#A78BFA,#C4B5FD);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Bizora<br>Dashboard</div>
+              <div class="project-desc">
+                Automated business dashboard for WhatsApp-based selling. AI parses Hinglish orders, auto-creates invoices with GST, and tracks customers in real-time.
+              </div>
+
+              <div class="ai-flow">
+                <div class="ai-flow-step">WhatsApp</div>
+                <div class="ai-flow-arrow">→</div>
+                <div class="ai-flow-step">AI Parser</div>
+                <div class="ai-flow-arrow">→</div>
+                <div class="ai-flow-step">Order</div>
+                <div class="ai-flow-arrow">→</div>
+                <div class="ai-flow-step">PDF Invoice</div>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-pill purple-pill">React 18</span>
+                <span class="tech-pill purple-pill">TypeScript</span>
+                <span class="tech-pill purple-pill">Express.js</span>
+                <span class="tech-pill purple-pill">PostgreSQL</span>
+                <span class="tech-pill purple-pill">Drizzle ORM</span>
+                <span class="tech-pill purple-pill">Twilio</span>
+                <span class="tech-pill purple-pill">Fuse.js</span>
+              </div>
+
+              <div class="project-metrics" style="border-top-color:rgba(167,139,250,0.15);">
+                <div class="metric">
+                  <div class="metric-val purple-val">3-Layer</div>
+                  <div class="metric-lab">AI Parsing</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-val purple-val">18%</div>
+                  <div class="metric-lab">Auto GST</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-val purple-val">SSE</div>
+                  <div class="metric-lab">Real-time</div>
+                </div>
+              </div>
+
+              <a href="https://github.com/Riya-chandra/Bizora" target="_blank" class="github-link">
+                ⭐ View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end grid -->
   </div>
 </section>
 
