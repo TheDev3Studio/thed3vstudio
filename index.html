@@ -764,6 +764,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 28px;
+    align-items: stretch;
+  }
+
+  .project-showcase-grid > .project-showcase {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-showcase-grid > .project-showcase .project-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-showcase-grid > .project-showcase .project-screen {
+    flex: 1;
   }
 
   .project-main.purple-theme {
@@ -1117,6 +1133,11 @@
       <a href="#work" class="btn-primary">View Our Work</a>
       <a href="#services" class="btn-ghost">Our Services</a>
     </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
